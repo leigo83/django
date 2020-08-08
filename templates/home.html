@@ -1,0 +1,13 @@
+{% load static %}
+<header>
+    <div>
+        <a href = "{% url 'make_post' %}">Make Post</a>>
+    </div>
+</header>
+<div>
+    {% for post in object_list %}
+    <a href = "{% url 'post' post.id %}">
+        <img src = "/{{post.image}}" width = 1280 height = 720>
+    </a>
+    {% endfor %}
+</div>>
